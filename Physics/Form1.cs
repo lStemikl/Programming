@@ -159,7 +159,7 @@ namespace Physics
                                             pics[k, j - 1] = null;
                                             //labels[k, j] = labels[k, j - 1];
                                             labels[k, j - 1] = null;
-                                            if (score == 2048)
+                                            if (score >= 2048)
                                             {
                                                 Form2 Win = new Form2();
                                                 Win.Show();
@@ -212,7 +212,7 @@ namespace Physics
                                             pics[k, j + 1] = null;
                                             //labels[k, j] = labels[k, j - 1];
                                             labels[k, j + 1] = null;
-                                            if (score == 2048)
+                                            if (score >= 2048)
                                             {
                                                 Form2 Win = new Form2();
                                                 Win.Show();
@@ -264,7 +264,7 @@ namespace Physics
                                             pics[j - 1, l] = null;
                                             //labels[k, j] = labels[k, j - 1];
                                             labels[j - 1, l] = null;
-                                            if (score == 2048)
+                                            if (score >= 2048)
                                             {
                                                 Form2 Win = new Form2();
                                                 Win.Show();
@@ -316,7 +316,7 @@ namespace Physics
                                             pics[j + 1, l] = null;
                                             //labels[k, j] = labels[k, j - 1];
                                             labels[j + 1, l] = null;
-                                            if (score == 2048)
+                                            if (score >= 2048)
                                             {
                                                 Form2 Win = new Form2();
                                                 Win.Show();
