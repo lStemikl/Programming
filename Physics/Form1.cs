@@ -100,28 +100,26 @@ namespace Physics
             pics[0, 1].BackColor = Color.Yellow;
             this.Controls.Add(pics[0, 1]);
             pics[0, 1].BringToFront();
-
-            
         }
-
+        //Создание поля игры
         private void changeColor(int sum,int k,int j)
         {
-            if (sum % 1024 == 0) pics[k, j].BackColor = Color.Pink;
+            if (sum % 1024 == 0) pics[k, j].BackColor = Color.Yellow;
             else if (sum % 512 == 0) pics[k, j].BackColor = Color.Red;
             else if (sum % 256 == 0) pics[k, j].BackColor = Color.DarkViolet;
             else if (sum % 128 == 0) pics[k, j].BackColor = Color.Blue;
             else if (sum % 64 == 0) pics[k, j].BackColor = Color.Brown;
-            else if (sum % 32 == 0) pics[k, j].BackColor = Color.Coral;
+            else if (sum % 32 == 0) pics[k, j].BackColor = Color.Pink;
             else if (sum % 16 == 0) pics[k, j].BackColor = Color.Cyan;
-            else if (sum % 8 == 0) pics[k, j].BackColor = Color.Maroon;
+            else if (sum % 8 == 0) pics[k, j].BackColor = Color.Purple;
             else pics[k, j].BackColor = Color.Green;
         }
-
+        //Цвета ячейки с цифрами
         private void _keyboardEvent(object sender, KeyEventArgs e)
         {
             bool ifPicsWasMoved = false;
             
-            switch (e.KeyCode.ToString())
+            switch (e.KeyCode.ToString())            
             {
                 case "Right":
                     for (int k = 0; k < 4; k++)
@@ -152,7 +150,7 @@ namespace Physics
                                             labels[k, j].Text = (a + b).ToString();
                                             score += (a + b);
                                             changeColor(a + b, k, j);
-                                            label1.Text = "Очки: " + score;
+                                            labScore.Text = "Очки: " + score;
                                             map[k, j - 1] = 0;
                                             //map[k, j] = 1;
                                             //pics[k, j] = pics[k, j - 1];
@@ -161,6 +159,11 @@ namespace Physics
                                             pics[k, j - 1] = null;
                                             //labels[k, j] = labels[k, j - 1];
                                             labels[k, j - 1] = null;
+                                            if (score == 2048)
+                                            {
+                                                Form2 Win = new Form2();
+                                                Win.Show();
+                                            }
                                         }
                                     }
                                     
@@ -168,7 +171,7 @@ namespace Physics
                             }
                         }
                     }
-                    
+                    //Передвижения вправо
                     break;
                 case "Left":
                     for (int k = 0; k < 4; k++)
@@ -200,7 +203,7 @@ namespace Physics
                                             labels[k, j].Text = (a + b).ToString();
                                             score += (a + b);
                                             changeColor(a + b, k, j);
-                                            label1.Text = "Очки: " + score;
+                                            labScore.Text = "Очки: " + score;
                                             map[k, j + 1] = 0;
                                             //map[k, j] = 1;
                                             //pics[k, j] = pics[k, j - 1];
@@ -209,13 +212,18 @@ namespace Physics
                                             pics[k, j + 1] = null;
                                             //labels[k, j] = labels[k, j - 1];
                                             labels[k, j + 1] = null;
+                                            if (score == 2048)
+                                            {
+                                                Form2 Win = new Form2();
+                                                Win.Show();
+                                            }
                                         }
                                     }
                                 }
                             }
                         }
                     }
-                   
+                   //Передвижения влево
                     break;
                 case "Down":
                     for (int k = 2; k >= 0; k--)
@@ -229,40 +237,45 @@ namespace Physics
                                     if (map[j, l] == 0)
                                     {
                                         ifPicsWasMoved = true;
-                                        map[j-1, l] = 0;
+                                        map[j - 1, l] = 0;
                                         map[j, l] = 1;
-                                        pics[j, l] = pics[j-1,l];
-                                        pics[j-1, l] = null;
-                                        labels[j,l] = labels[j - 1,l];
-                                        labels[j - 1,l] = null;
-                                        pics[j, l].Location = new Point(pics[j, l].Location.X, pics[j, l].Location.Y+56);
+                                        pics[j, l] = pics[j - 1, l];
+                                        pics[j - 1, l] = null;
+                                        labels[j, l] = labels[j - 1, l];
+                                        labels[j - 1, l] = null;
+                                        pics[j, l].Location = new Point(pics[j, l].Location.X, pics[j, l].Location.Y + 56);
                                     }
                                     else
                                     {
-                                        int a = int.Parse(labels[ j,l].Text);
-                                        int b = int.Parse(labels[ j - 1,l].Text);
+                                        int a = int.Parse(labels[j, l].Text);
+                                        int b = int.Parse(labels[j - 1, l].Text);
                                         if (a == b)
                                         {
                                             ifPicsWasMoved = true;
                                             labels[j, l].Text = (a + b).ToString();
                                             score += (a + b);
                                             changeColor(a + b, j, l);
-                                            label1.Text = "Очки: " + score;
-                                            map[j - 1,l] = 0;
+                                            labScore.Text = "Очки: " + score;
+                                            map[j - 1, l] = 0;
                                             //map[k, j] = 1;
                                             //pics[k, j] = pics[k, j - 1];
                                             this.Controls.Remove(pics[j - 1, l]);
                                             this.Controls.Remove(labels[j - 1, l]);
-                                            pics[ j - 1,l] = null;
+                                            pics[j - 1, l] = null;
                                             //labels[k, j] = labels[k, j - 1];
-                                            labels[ j - 1,l] = null;
+                                            labels[j - 1, l] = null;
+                                            if (score == 2048)
+                                            {
+                                                Form2 Win = new Form2();
+                                                Win.Show();
+                                            }
                                         }
                                     }
                                 }
                             }
                         }
                     }
-                    
+                    //Передвижения вниз
                     break;
                 case "Up":
                     for (int k = 1; k < 4; k++)
@@ -294,7 +307,7 @@ namespace Physics
                                             labels[j, l].Text = (a + b).ToString();
                                             score += (a + b);
                                             changeColor(a + b, j, l);
-                                            label1.Text = "Очки: " + score;
+                                            labScore.Text = "Очки: " + score;
                                             map[j + 1, l] = 0;
                                             //map[k, j] = 1;
                                             //pics[k, j] = pics[k, j - 1];
@@ -303,19 +316,26 @@ namespace Physics
                                             pics[j + 1, l] = null;
                                             //labels[k, j] = labels[k, j - 1];
                                             labels[j + 1, l] = null;
+                                            if (score == 2048)
+                                            {
+                                                Form2 Win = new Form2();
+                                                Win.Show();
+                                            }
                                         }
                                     }
                                 }
                             }
                         }
                     }
-                    
+                    //Передвижения вверх
                     break;
+
+
             }
             if(ifPicsWasMoved)
             generateNewPic();
         }
-        //+56
+        //Чайкин
 
     }
 }

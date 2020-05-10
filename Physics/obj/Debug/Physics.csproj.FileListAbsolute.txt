@@ -13,3 +13,17 @@ c:\users\sodrk\documents\visual studio 2015\Projects\Physics\Physics\bin\Debug\T
 c:\users\sodrk\documents\visual studio 2015\Projects\Physics\Physics\bin\Debug\Tao.Platform.Windows.xml
 c:\users\sodrk\documents\visual studio 2015\Projects\Physics\Physics\bin\Debug\Tao.FreeGlut.dll
 c:\users\sodrk\documents\visual studio 2015\Projects\Physics\Physics\bin\Debug\Tao.FreeGlut.xml
+C:\Users\stepa\Desktop\2048\Physics\bin\Debug\Physics.exe.config
+C:\Users\stepa\Desktop\2048\Physics\bin\Debug\Physics.exe
+C:\Users\stepa\Desktop\2048\Physics\bin\Debug\Physics.pdb
+C:\Users\stepa\Desktop\2048\Physics\bin\Debug\Tao.FreeGlut.xml
+C:\Users\stepa\Desktop\2048\Physics\bin\Debug\Tao.OpenGl.xml
+C:\Users\stepa\Desktop\2048\Physics\bin\Debug\Tao.Platform.Windows.xml
+C:\Users\stepa\Desktop\2048\Physics\obj\Debug\Physics.csprojAssemblyReference.cache
+C:\Users\stepa\Desktop\2048\Physics\obj\Debug\Physics.Form1.resources
+C:\Users\stepa\Desktop\2048\Physics\obj\Debug\Physics.Properties.Resources.resources
+C:\Users\stepa\Desktop\2048\Physics\obj\Debug\Physics.csproj.GenerateResource.cache
+C:\Users\stepa\Desktop\2048\Physics\obj\Debug\Physics.csproj.CopyComplete
+C:\Users\stepa\Desktop\2048\Physics\obj\Debug\Physics.exe
+C:\Users\stepa\Desktop\2048\Physics\obj\Debug\Physics.pdb
+C:\Users\stepa\Desktop\2048\Physics\obj\Debug\Physics.Form2.resources

@@ -28,25 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.labScore = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // labScore
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-            this.label1.Location = new System.Drawing.Point(13, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 29);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Очки:0";
+            this.labScore.AutoSize = true;
+            this.labScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
+            this.labScore.Location = new System.Drawing.Point(62, 9);
+            this.labScore.Name = "labScore";
+            this.labScore.Size = new System.Drawing.Size(93, 29);
+            this.labScore.TabIndex = 16;
+            this.labScore.Text = "Очки:0";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(243, 313);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.labScore);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
             this.Text = "2048";
             this.ResumeLayout(false);
@@ -55,7 +56,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labScore;
     }
 }
 
