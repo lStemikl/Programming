@@ -1,1 +1,1 @@
-# MiniGame2048-C-
+# 2048_Chaykin
